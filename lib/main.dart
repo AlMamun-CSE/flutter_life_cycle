@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_life_cycle/lifecycle_manager.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,11 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(
-        body: Center(
-          child: FlutterLogo(),
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: LifeCycleManager(),
     );
   }
 }
